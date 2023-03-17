@@ -1,0 +1,12 @@
+#trip-main-map,
+#trip-main-roadview{
+    width:50%;
+    height:300px;
+    float: left;
+}
+
+#trip-main-map-map,
+#trip-main-roadview-roadview {
+    width:100%;
+    height:100%;
+}
