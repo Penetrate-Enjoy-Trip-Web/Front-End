@@ -43,6 +43,11 @@ header {
     float: left;
     margin: 0 10px;
 }
+#header-right-menu > div > a:hover {
+    color: rgb(84, 170, 227);
+    text-decoration: underline;
+}
+
 
 #header-right-login {
     flex: 0 1 auto;
@@ -50,6 +55,10 @@ header {
 #header-right-login > div {
     float: left;
     margin: 0 10px;
+}
+#header-right-login > div > a:hover {
+    color: rgb(84, 170, 227);
+    text-decoration: underline;
 }
 
 /* ----------------------- */
