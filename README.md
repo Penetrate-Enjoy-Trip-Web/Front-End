@@ -4,7 +4,7 @@
 ### 🛠 Skiis 🛠
 <img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML&logoColor=white"/> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS&logoColor=white"/> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"/>
 
-### :bulb: Maker - Brojjun & thdqudgns
+### :bulb: Maker - [Brojjun](https://github.com/Brojjun) & [thdqudgns](https://github.com/thdqudgns)
 
 ### Introduce
 여행을 가기 위해서는 어느곳에 무엇이 있는지 알아야 한다   
@@ -13,6 +13,11 @@
 ---
 
 # 1. 메인페이지
+
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">CSS코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">JS코드</a>
+
 - 비행기 이미지를 넣어 여행을 가고 싶은 마음을 불러 일으키도록 함   
 
 <img src="https://user-images.githubusercontent.com/92148521/226173326-15e57801-d4a1-4443-b4d2-a4f32455e948.png" width="1000px">
@@ -20,6 +25,12 @@
 ---
 
 # 2. 회원가입, 로그인
+
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">회원가입 HTML코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">로그인 HTML코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">회원가입/로그인 CSS코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">회원가입/로그인 JS코드</a>
+
 - 회원가입 : 간단한 정보 입력으로 가입, 아이디 중복검사, 아이디 찾기 기능   
 - 로그인 : 로그인 기능 및, 비밀번호 찾기 기능   
 
@@ -28,6 +39,11 @@
 ---
 
 # 3. 내 정보 조회
+
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">CSS코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">JS코드</a>
+
 - 로그인한 회원의 이름, 아이디, 이메일을 조회. 수정, 삭제 버튼 구현
 
 <img src="https://user-images.githubusercontent.com/92148521/226174442-7a59245f-35e8-4f26-b450-57aac30097d1.png" width="1000px">
@@ -40,6 +56,11 @@
 ---
 
 # 4. 관광 정보 조회
+
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">CSS코드</a>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">JS코드</a>
+
 - 메인페이지의 문구를 누르면 관광정보 조회 페이지로 이동
 
 <img src="https://user-images.githubusercontent.com/92148521/226174553-8391f902-13bd-49fa-af35-abf3f4096b2a.png" width="500px">
