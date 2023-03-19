@@ -201,9 +201,9 @@ function logout() {
 </div>
 </details>
 
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a><br>
+<!-- <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/main.css" target="_blank">CSS코드</a><br>
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/loginCheck.js" target="_blank">JS코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/loginCheck.js" target="_blank">JS코드</a><br> -->
 
 - 비행기 이미지를 넣어 여행을 가고 싶은 마음을 불러 일으키도록 함   
 
@@ -643,10 +643,10 @@ function checkId() {
 </div>
 </details>
 
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/makeId.html" target="_blank">회원가입 HTML코드</a><br>
+<!-- <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/makeId.html" target="_blank">회원가입 HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/login.html" target="_blank">로그인 HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/modal.css" target="_blank">회원가입/로그인 CSS코드</a><br>
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/modal.js" target="_blank">회원가입/로그인 JS코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/modal.js" target="_blank">회원가입/로그인 JS코드</a><br> -->
 
 - 회원가입 : 간단한 정보 입력으로 가입, 아이디 중복검사, 아이디 찾기 기능   
 - 로그인 : 로그인 기능 및, 비밀번호 찾기 기능   
@@ -871,10 +871,10 @@ content.innerHTML += `
 
 </div>
 </details>
-
+<!-- 
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/mypage.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/mypage.css" target="_blank">CSS코드</a><br>
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/mypage.js" target="_blank">JS코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/mypage.js" target="_blank">JS코드</a><br> -->
 
 - 로그인한 회원의 이름, 아이디, 이메일을 조회. 수정, 삭제 버튼 구현
 
@@ -1348,10 +1348,10 @@ function closeRoadview() {
 
 </div>
 </details>
-
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/trip.html" target="_blank">HTML코드</a><br>
+	
+<!-- <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/trip.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/trip.css" target="_blank">CSS코드</a><br>
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/trip.js" target="_blank">JS코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/trip.js" target="_blank">JS코드</a><br> -->
 
 - 메인페이지의 문구를 누르면 관광정보 조회 페이지로 이동
 
