@@ -219,35 +219,42 @@ modal로 구현했다.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/footer.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+  </head>
+  <body>
     <!-- header -->
     <header>
-        <!-- title -->
-        <div id="header-title">
-            <a href="main.html"><span>Enjoy Trip</span></a>
+      <!-- title -->
+      <div id="header-title">
+        <a href="main.html"><span>Enjoy Trip</span></a>
+      </div>
+      <!-- header-right -->
+      <div id="header-right">
+        <!-- menu -->
+        <div id="header-right-menu">
+          <!-- 공지사항 -->
+          <div>
+            <a href="#"><span>공지사항</span></a>
+          </div>
+          <!-- 공유게시판 -->
+          <div>
+            <a href="#"><span>공유게시판</span></a>
+          </div>
+          <!-- 관광지역 -->
+          <div>
+            <a href="trip.html"><span>관광지역</span></a>
+          </div>
         </div>
-        <!-- header-right -->
-        <div id="header-right">
-            <!-- menu -->
-            <div id="header-right-menu">
-                <!-- 공지사항 -->
-                <div><a href="#">공지사항</a></div>
-                <!-- 공유게시판 -->
-                <div><a href="#">공유게시판</a></div>
-                <!-- 관광지역 -->
-                <div><a href="trip.html">관광지역</a></div>
-            </div>
-            <!-- login -->
-            <div id="header-right-login">
+        <!-- login -->
+        <div id="header-right-login">
                 <!-- 로그인 -->
                 <div><a href="/login.html" id="loginCheck">로그인</a></div>
                 <!-- 회원가입 -->
@@ -256,125 +263,182 @@ modal로 구현했다.
                 <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
                 <!-- 내 정보 조회 -->
                 <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
-            </div>
         </div>
+      </div>
     </header>
-    
+
     <!-- main -->
     <main>
-        <section>
-            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
-            <article id="main-background-first">
-                <div class="background-image">
-                    <div class="dark-overlay"></div>
-                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
-                </div>
-            </article>
-            <!-- 관광지 사진 -->
-            <!-- <article id="main-background-second"></article> -->
-            <!-- 공지사항 -->
-            <!-- <article id="main-background-third"></article> -->
-            <!-- 공유게시판 -->
-            <!-- <article id="main-background-fourth"></article> -->
-        </section>
+      <section>
+        <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
+        <article id="main-background-first">
+          <div class="background-image">
+            <div class="dark-overlay"></div>
+            <a href="#" class="background-image-button">여행을 떠나볼까요?</a>
+          </div>
+        </article>
+        <!-- 관광지 사진 -->
+        <article id="main-background-second"></article>
+        <!-- 공지사항 -->
+        <article id="main-background-third"></article>
+        <!-- 공유게시판 -->
+        <article id="main-background-fourth"></article>
+      </section>
     </main>
-    
+
+    <!-- modal -->
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>회원가입</h3>
+        <form>
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required />
+          <label for="name">아이디</label>
+          <input type="id" id="id" name="id" placeholder="아이디를 입력하세요" required />
+          <button type="id" onclick="checkId()">중복검사</button><br /><br />
+          <label for="email">이메일:</label>
+          <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required />
+          <label for="password">비밀번호:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호를 입력하세요"
+            required
+          />
+        </form>
+        <input type="submit" value="가입하기" onclick="makeId()" />
+        <input type="submit" value="회원찾기" onclick="closeModal()" />
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/js/modal.js"></script>
     <!-- footer -->
     <footer>
-        <!-- logo -->
-        <span>
-            <img src="./img/ssafy_logo.png" alt="ssafy">
-        </span>
-        <!-- 이용약관 등 -->
-        <!-- 관계자 위치, 연락처, 이메일 -->
-        <span>Copyright © SSAFY 2023 Daejeon
-        <br>Designed by thdqudgns & Brojjun</span>
+      <!-- logo -->
+      <span>
+        <img src="./img/ssafy_logo.png" alt="ssafy" />
+      </span>
+      <!-- 이용약관 등 -->
+      <!-- 관계자 위치, 연락처, 이메일 -->
+      <span>Copyright © SSAFY 2023 Daejeon <br />Designed by thdqudgns & Brojjun</span>
     </footer>
-
     <!-- loginCheck -->
     <script src="./js/loginCheck.js"></script>
-</body>
+  </body>
 </html>
 ``` 
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/footer.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+  </head>
+  <body>
     <!-- header -->
     <header>
-        <!-- title -->
-        <div id="header-title">
-            <a href="main.html"><span>Enjoy Trip</span></a>
+      <!-- title -->
+      <div id="header-title">
+        <a href="main.html" id="header-title-name"><span>Enjoy Trip</span></a>
+      </div>
+      <!-- header-right -->
+      <div id="header-right">
+        <!-- menu -->
+        <div id="header-right-menu">
+          <!-- 공지사항 -->
+          <div>
+            <a href="#"><span>공지사항</span></a>
+          </div>
+          <!-- 공유게시판 -->
+          <div>
+            <a href="#"><span>공유게시판</span></a>
+          </div>
+          <!-- 관광지역 -->
+          <div>
+            <a href="trip.html"><span>관광지역</span></a>
+          </div>
         </div>
-        <!-- header-right -->
-        <div id="header-right">
-            <!-- menu -->
-            <div id="header-right-menu">
-                <!-- 공지사항 -->
-                <div><a href="#">공지사항</a></div>
-                <!-- 공유게시판 -->
-                <div><a href="#">공유게시판</a></div>
-                <!-- 관광지역 -->
-                <div><a href="trip.html">관광지역</a></div>
-            </div>
-            <!-- login -->
-            <div id="header-right-login">
-                <!-- 로그인 -->
-                <div><a href="/login.html" id="loginCheck">로그인</a></div>
-                <!-- 회원가입 -->
-                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
-                <!-- 로그아웃 -->
-                <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
-                <!-- 내 정보 조회 -->
-                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
-            </div>
+        <!-- login -->
+        <div id="header-right-login">
+                          <!-- 로그인 -->
+                          <div><a href="/login.html" id="loginCheck">로그인</a></div>
+                          <!-- 회원가입 -->
+                          <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
+                          <!-- 로그아웃 -->
+                          <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
+                          <!-- 내 정보 조회 -->
+                          <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
         </div>
+      </div>
     </header>
-    
+
     <!-- main -->
     <main>
-        <section>
-            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
-            <article id="main-background-first">
-                <div class="background-image">
-                    <div class="dark-overlay"></div>
-                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
-                </div>
-            </article>
-            <!-- 관광지 사진 -->
-            <!-- <article id="main-background-second"></article> -->
-            <!-- 공지사항 -->
-            <!-- <article id="main-background-third"></article> -->
-            <!-- 공유게시판 -->
-            <!-- <article id="main-background-fourth"></article> -->
-        </section>
+      <section>
+        <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
+        <article id="main-background-first">
+          <div class="background-image">
+            <div class="dark-overlay"></div>
+            <a href="#" class="background-image-button">여행을 떠나볼까요?</a>
+          </div>
+        </article>
+        <!-- 관광지 사진 -->
+        <article id="main-background-second"></article>
+        <!-- 공지사항 -->
+        <article id="main-background-third"></article>
+        <!-- 공유게시판 -->
+        <article id="main-background-fourth"></article>
+      </section>
     </main>
-    
+
+
+   <!-- modal -->
+   <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>로그인</h3>
+      <form>
+        <label for="name">아이디</label>
+        <input type="id" id="id" name="id" placeholder="아이디를 입력하세요" required />
+        <label for="password">비밀번호:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="비밀번호를 입력하세요"
+          required
+        />
+      </form>
+      <input type="submit" value="로그인" onclick="login()" />
+      <input type="submit" value="비밀번호찾기" onclick="closeModal()" />
+    </div>
+  </div>
+
+  
     <!-- footer -->
     <footer>
-        <!-- logo -->
-        <span>
-            <img src="./img/ssafy_logo.png" alt="ssafy">
-        </span>
-        <!-- 이용약관 등 -->
-        <!-- 관계자 위치, 연락처, 이메일 -->
-        <span>Copyright © SSAFY 2023 Daejeon
-        <br>Designed by thdqudgns & Brojjun</span>
+      <!-- logo -->
+      <span>
+        <img src="./img/ssafy_logo.png" alt="ssafy" />
+      </span>
+      <!-- 이용약관 등 -->
+      <!-- 관계자 위치, 연락처, 이메일 -->
+      <span>Copyright © SSAFY 2023 Daejeon <br />Designed by thdqudgns & Brojjun</span>
     </footer>
-
+    <script type="text/javascript" src="/js/modal.js"></script>
     <!-- loginCheck -->
     <script src="./js/loginCheck.js"></script>
-</body>
+  </body>
 </html>
 ```
 
@@ -576,8 +640,8 @@ function checkId() {
 </div>
 </details>
 
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/login.html" target="_blank">회원가입 HTML코드</a><br>
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/makeId.html" target="_blank">로그인 HTML코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/makeId.html" target="_blank">회원가입 HTML코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/login.html" target="_blank">로그인 HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/modal.css" target="_blank">회원가입/로그인 CSS코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/modal.js" target="_blank">회원가입/로그인 JS코드</a><br>
 
@@ -603,8 +667,8 @@ function checkId() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/mypage.css">
 </head>
 <body>
     <!-- header -->
@@ -637,26 +701,24 @@ function checkId() {
             </div>
         </div>
     </header>
-    
+
     <!-- main -->
-    <main>
-        <section>
-            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
-            <article id="main-background-first">
-                <div class="background-image">
-                    <div class="dark-overlay"></div>
-                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
-                </div>
-            </article>
-            <!-- 관광지 사진 -->
-            <!-- <article id="main-background-second"></article> -->
-            <!-- 공지사항 -->
-            <!-- <article id="main-background-third"></article> -->
-            <!-- 공유게시판 -->
-            <!-- <article id="main-background-fourth"></article> -->
-        </section>
+    <main id="mypage-main">
+        <!-- name, id, email 조회하고 삭제, 수정하기 -->
+        <div id="mypage-section">
+            <div id="mypage-title">
+                &lt; 내 정보 조회 &gt;
+            </div>
+            <div id="mypage-content">
+                
+            </div>
+            <div id="mypage-button">
+                <button onclick="mypageUpdate()" id="btn-update">수정</button>
+                <button onclick="mypageDelete()" id="btn-delete">삭제</button>
+            </div>
+        </div>
     </main>
-    
+
     <!-- footer -->
     <footer>
         <!-- logo -->
@@ -669,8 +731,8 @@ function checkId() {
         <br>Designed by thdqudgns & Brojjun</span>
     </footer>
 
-    <!-- loginCheck -->
     <script src="./js/loginCheck.js"></script>
+    <script src="./js/mypage.js"></script>
 </body>
 </html>
 ```
@@ -832,6 +894,7 @@ content.innerHTML += `
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/trip.css">
 </head>
 <body>
     <!-- header -->
@@ -845,43 +908,87 @@ content.innerHTML += `
             <!-- menu -->
             <div id="header-right-menu">
                 <!-- 공지사항 -->
-                <div><a href="#">공지사항</a></div>
+                <div><a href="#"><span>공지사항</span></a></div>
                 <!-- 공유게시판 -->
-                <div><a href="#">공유게시판</a></div>
+                <div><a href="#"><span>공유게시판</span></a></div>
                 <!-- 관광지역 -->
-                <div><a href="trip.html">관광지역</a></div>
+                <div><a href="trip.html"><span>관광지역</span></a></div>
             </div>
             <!-- login -->
-            <div id="header-right-login">
-                <!-- 로그인 -->
-                <div><a href="/login.html" id="loginCheck">로그인</a></div>
-                <!-- 회원가입 -->
-                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
-                <!-- 로그아웃 -->
-                <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
-                <!-- 내 정보 조회 -->
-                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
-            </div>
+            <!-- <div id="header-right-login">
+                <div><a href="/login.html"><span>로그인</span></a></div>
+                <div><a href="/makeId.html"><span>회원가입</span></a></div>
+            </div> 
+            -->
         </div>
     </header>
-    
-    <!-- main -->
+
     <main>
-        <section>
-            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
-            <article id="main-background-first">
-                <div class="background-image">
-                    <div class="dark-overlay"></div>
-                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
+        <!-- 중앙 left content end -->
+        <!-- 중앙 center content end -->
+        <div class="col-md-9">
+            <div class="alert alert-primary mt-3 text-center fw-bold" role="alert">
+            전국 관광지 정보
+            </div>
+            <!-- 관광지 검색 start -->
+            <form class="d-flex my-3" onsubmit="return false;" role="search">
+            <select id="search-area" class="form-select me-2">
+                <option value="0" selected>검색 할 지역 선택</option>
+            </select>
+            <select id="search-content-id" class="form-select me-2">
+                <option value="0" selected>관광지 유형</option>
+                <option value="12">관광지</option>
+                <option value="14">문화시설</option>
+                <option value="15">축제공연행사</option>
+                <option value="25">여행코스</option>
+                <option value="28">레포츠</option>
+                <option value="32">숙박</option>
+                <option value="38">쇼핑</option>
+                <option value="39">음식점</option>
+            </select>
+            <input
+                id="search-keyword"
+                class="form-control me-2"
+                type="search"
+                placeholder="검색어"
+                aria-label="검색어"
+            />
+            <button id="btn-search" class="btn btn-outline-success" type="button">검색</button>
+            </form>
+
+            <!-- kakao map start -->
+            <!-- <div id="map" class="mt-3" style="width: 100%; height: 400px"></div> -->
+            
+            <!-- 지도를 표시할 div 입니다 -->
+            <div id="trip-main-container">
+                <div id="trip-main-rvWrapper">
+                    <div id="trip-main-roadview"></div> <!-- 로드뷰를 표시할 div 입니다 -->
+                    <div id="trip-main-close" title="로드뷰닫기" onclick="closeRoadview()"><span class="img"></span></div>
                 </div>
-            </article>
-            <!-- 관광지 사진 -->
-            <!-- <article id="main-background-second"></article> -->
-            <!-- 공지사항 -->
-            <!-- <article id="main-background-third"></article> -->
-            <!-- 공유게시판 -->
-            <!-- <article id="main-background-fourth"></article> -->
-        </section>
+                <div id="trip-main-mapWrapper">
+                    <div id="trip-main-map"></div> <!-- 지도를 표시할 div 입니다 -->
+                    <div id="trip-main-roadviewControl" onclick="setRoadviewRoad()"></div>
+                </div>
+            </div>
+            <!-- kakao map end -->
+
+            <div class="row">
+            <table class="table table-striped" style="display: none">
+                <thead>
+                <tr>
+                    <th>대표이미지</th>
+                    <th>관광지명</th>
+                    <th>주소</th>
+                    <th>위도</th>
+                    <th>경도</th>
+                </tr>
+                </thead>
+                <tbody id="trip-list"></tbody>
+            </table>
+            </div>
+            <!-- 관광지 검색 end -->
+        </div>
+        <!-- 중앙 content end -->
     </main>
     
     <!-- footer -->
@@ -893,11 +1000,11 @@ content.innerHTML += `
         <!-- 이용약관 등 -->
         <!-- 관계자 위치, 연락처, 이메일 -->
         <span>Copyright © SSAFY 2023 Daejeon
-        <br>Designed by thdqudgns & Brojjun</span>
-    </footer>
-
-    <!-- loginCheck -->
-    <script src="./js/loginCheck.js"></script>
+            <br>Designed by thdqudgns & Brojjun</span>
+        </footer>
+        
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=***본인의 KaKao API 인증 키***"></script>
+        <script src="./js/trip.js"></script>
 </body>
 </html>
 ```
