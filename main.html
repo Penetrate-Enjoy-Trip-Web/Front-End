@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
     <!-- header -->
@@ -19,18 +21,22 @@
             <!-- menu -->
             <div id="header-right-menu">
                 <!-- 공지사항 -->
-                <div><a href="#"><span>공지사항</span></a></div>
+                <div><a href="#">공지사항</a></div>
                 <!-- 공유게시판 -->
-                <div><a href="#"><span>공유게시판</span></a></div>
+                <div><a href="#">공유게시판</a></div>
                 <!-- 관광지역 -->
-                <div><a href="trip.html"><span>관광지역</span></a></div>
+                <div><a href="trip.html">관광지역</a></div>
             </div>
             <!-- login -->
             <div id="header-right-login">
                 <!-- 로그인 -->
-                <div><a href="/login.html"><span>로그인</span></a></div>
+                <div><a href="/login.html" id="loginCheck">로그인</a></div>
                 <!-- 회원가입 -->
-                <div><a href="/makeId.html"><span>회원가입</span></a></div>
+                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
+                <!-- 로그아웃 -->
+                <div><a href="" onclick="logout()" id="logoutCheck">로그아웃</a></div>
+                <!-- 내 정보 조회 -->
+                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
             </div>
         </div>
     </header>
@@ -71,5 +77,28 @@
         <span>Copyright © SSAFY 2023 Daejeon
         <br>Designed by thdqudgns & Brojjun</span>
     </footer>
+
+    <script>
+        let loginCheck = document.getElementById('loginCheck');
+        let registerCheck = document.getElementById('registerCheck');
+        let logoutCheck = document.getElementById('logoutCheck');
+        let mypageCheck = document.getElementById('mypageCheck');
+
+        if (window.sessionStorage.id) {
+            loginCheck.style.display = 'none';
+            registerCheck.style.display = 'none';
+            logoutCheck.style.display = 'content';
+            mypageCheck.style.display = 'content';
+        } else {
+            loginCheck.style.display = 'content';
+            registerCheck.style.display = 'content';
+            logoutCheck.style.display = 'none';
+            mypageCheck.style.display = 'none';
+        }
+
+        function logout() {
+            window.sessionStorage.removeItem('id');
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+footer {
+    background-color: #5e5c5c;
+    color: #fff;
+    font-size: 12px;
+    padding: 20px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+footer > span > img {
+    width: 60px;
+}
