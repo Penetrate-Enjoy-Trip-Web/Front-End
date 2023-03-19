@@ -12,13 +12,13 @@ a {
 /* ----------------------- */
 
 #main-background-first {
-    height: 600px;
+    height: 1200px;
 }
 
 #main-background-second,
 #main-background-third,
 #main-background-fourth{
-    height: 200px;
+    /* height: 200px; */
 }
 
 .background-image {
