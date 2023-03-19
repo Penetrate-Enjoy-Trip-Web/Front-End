@@ -11,7 +11,39 @@ function closeModal() {
 
 function login(){
 	const id = document.getElementById("id").value;
-	sessionStorage.setItem("id",id);
+	const userDatas = [];
+	for(let i = 0; i < sessionStorage.length; i++){
+		const key = sessionStorage.key(i);
+		if(key == "user"){
+			const userData = JSON.parse(sessionStorage.getItem(key));
+			userDatas.push(userData);
+		}
+	}
+	let flag = false;
+	for(let i = 0; i < userDatas.length; i++){
+		const user = userDatas[i];
+		if(user.id == id){
+			flag = true;
+			break;
+		}
+	}
+	if(flag){
+		sessionStorage.setItem("id",id);
+		closeModal();
+	}
+	else{
+		alert("없는 아이디 입니다.");
+	}
+}
+
+function makeId(){
+	const userInfo = {
+		id: document.getElementById("id").value,
+		pw: document.getElementById("password").value,
+		email: document.getElementById("email").value,
+		name: document.getElementById("name").value
+	  };
+	  sessionStorage.setItem("user",JSON.stringify(userInfo));
 	closeModal();
 }
 
