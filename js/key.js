@@ -1,1 +1,1 @@
-const serviceKey = "leH4E9ahSVtSPIZO4MIbtOkGAJeK0KmkTUWKDo%2Fa8soDl7j%2B%2FFr84MK8ZnQ7iqF2Y9vz%2FUgHlQCj095kvEjgRg%3D%3D";
+const serviceKey = "***본인의 data.go.kr의 '한국관광공사_국문 관광정보 서비스_GW' 서비스키***";
