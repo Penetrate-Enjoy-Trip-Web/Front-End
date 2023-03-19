@@ -26,6 +26,8 @@
 
 # 2. 회원가입, 로그인
 
+modal로 구현했다.
+
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">회원가입 HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">로그인 HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/modal.css" target="_blank">회원가입/로그인 CSS코드</a><br>
