@@ -15,7 +15,7 @@
 # 1. 메인페이지
 
 <details>
-<summary>여기를 눌러주세요</summary>
+<summary>HTML</summary>
 <div markdown="1">       
 
 ```html
@@ -97,7 +97,7 @@
 </details>
 
 <details>
-<summary>여기를 눌러주세요</summary>
+<summary>CSS</summary>
 <div markdown="1">       
 
 ```css
@@ -169,7 +169,7 @@ a {
 </details>
 
 <details>
-<summary>여기를 눌러주세요</summary>
+<summary>JS</summary>
 <div markdown="1">       
 
 ```js
@@ -197,6 +197,7 @@ function logout() {
 
 </div>
 </details>
+
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/main.css" target="_blank">CSS코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/loginCheck.js" target="_blank">JS코드</a><br>
@@ -211,6 +212,370 @@ function logout() {
 
 modal로 구현했다.
 
+<details>
+<summary>HTML</summary>
+<div markdown="1">       
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- title -->
+        <div id="header-title">
+            <a href="main.html"><span>Enjoy Trip</span></a>
+        </div>
+        <!-- header-right -->
+        <div id="header-right">
+            <!-- menu -->
+            <div id="header-right-menu">
+                <!-- 공지사항 -->
+                <div><a href="#">공지사항</a></div>
+                <!-- 공유게시판 -->
+                <div><a href="#">공유게시판</a></div>
+                <!-- 관광지역 -->
+                <div><a href="trip.html">관광지역</a></div>
+            </div>
+            <!-- login -->
+            <div id="header-right-login">
+                <!-- 로그인 -->
+                <div><a href="/login.html" id="loginCheck">로그인</a></div>
+                <!-- 회원가입 -->
+                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
+                <!-- 로그아웃 -->
+                <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
+                <!-- 내 정보 조회 -->
+                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- main -->
+    <main>
+        <section>
+            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
+            <article id="main-background-first">
+                <div class="background-image">
+                    <div class="dark-overlay"></div>
+                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
+                </div>
+            </article>
+            <!-- 관광지 사진 -->
+            <!-- <article id="main-background-second"></article> -->
+            <!-- 공지사항 -->
+            <!-- <article id="main-background-third"></article> -->
+            <!-- 공유게시판 -->
+            <!-- <article id="main-background-fourth"></article> -->
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <!-- logo -->
+        <span>
+            <img src="./img/ssafy_logo.png" alt="ssafy">
+        </span>
+        <!-- 이용약관 등 -->
+        <!-- 관계자 위치, 연락처, 이메일 -->
+        <span>Copyright © SSAFY 2023 Daejeon
+        <br>Designed by thdqudgns & Brojjun</span>
+    </footer>
+
+    <!-- loginCheck -->
+    <script src="./js/loginCheck.js"></script>
+</body>
+</html>
+``` 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- title -->
+        <div id="header-title">
+            <a href="main.html"><span>Enjoy Trip</span></a>
+        </div>
+        <!-- header-right -->
+        <div id="header-right">
+            <!-- menu -->
+            <div id="header-right-menu">
+                <!-- 공지사항 -->
+                <div><a href="#">공지사항</a></div>
+                <!-- 공유게시판 -->
+                <div><a href="#">공유게시판</a></div>
+                <!-- 관광지역 -->
+                <div><a href="trip.html">관광지역</a></div>
+            </div>
+            <!-- login -->
+            <div id="header-right-login">
+                <!-- 로그인 -->
+                <div><a href="/login.html" id="loginCheck">로그인</a></div>
+                <!-- 회원가입 -->
+                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
+                <!-- 로그아웃 -->
+                <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
+                <!-- 내 정보 조회 -->
+                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- main -->
+    <main>
+        <section>
+            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
+            <article id="main-background-first">
+                <div class="background-image">
+                    <div class="dark-overlay"></div>
+                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
+                </div>
+            </article>
+            <!-- 관광지 사진 -->
+            <!-- <article id="main-background-second"></article> -->
+            <!-- 공지사항 -->
+            <!-- <article id="main-background-third"></article> -->
+            <!-- 공유게시판 -->
+            <!-- <article id="main-background-fourth"></article> -->
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <!-- logo -->
+        <span>
+            <img src="./img/ssafy_logo.png" alt="ssafy">
+        </span>
+        <!-- 이용약관 등 -->
+        <!-- 관계자 위치, 연락처, 이메일 -->
+        <span>Copyright © SSAFY 2023 Daejeon
+        <br>Designed by thdqudgns & Brojjun</span>
+    </footer>
+
+    <!-- loginCheck -->
+    <script src="./js/loginCheck.js"></script>
+</body>
+</html>
+```
+
+</div>
+</details>
+
+<details>
+<summary>CSS</summary>
+<div markdown="1">       
+
+```css
+/* 여행, 바다 느낌의 색감 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px; /* 추가 */
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+/* 모달창이 화면 중앙에 위치하도록 변경 */
+@media screen and (min-width: 768px) {
+  .modal-content {
+    margin: 10% auto;
+  }
+}
+
+.close {
+  color: #555;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-head {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.modal-head > h3 {
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+form {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="id"] {
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  color: #555;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="id"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px #1a73e8;
+}
+
+input[type="submit"],
+button[type="id"] {
+  background-color: #5792e0;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover,
+button[type="id"]:hover {
+  background-color: #466eab;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.modal1 {
+  display: none;
+}
+
+.modal2 {
+  display: none;
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary>JS</summary>
+<div markdown="1">       
+
+```js
+
+function openModal(data) {
+	document.getElementById('modal1').style.display = 'block';
+	location.href = data;
+}
+
+function closeModal() {
+	document.getElementById('modal').style.display = 'none';
+	location.href = "main.html"
+}
+
+function login(){
+	const id = document.getElementById("id").value;
+	const userDatas = [];
+	for(let i = 0; i < sessionStorage.length; i++){
+		const key = sessionStorage.key(i);
+		if(key == "user"){
+			const userData = JSON.parse(sessionStorage.getItem(key));
+			userDatas.push(userData);
+		}
+	}
+	let flag = false;
+	for(let i = 0; i < userDatas.length; i++){
+		const user = userDatas[i];
+		if(user.id == id){
+			flag = true;
+			break;
+		}
+	}
+	if(flag){
+		sessionStorage.setItem("id",id);
+		closeModal();
+	}
+	else{
+		alert("없는 아이디 입니다.");
+	}
+}
+
+function makeId(){
+	const userInfo = {
+		id: document.getElementById("id").value,
+		pw: document.getElementById("password").value,
+		email: document.getElementById("email").value,
+		name: document.getElementById("name").value
+	  };
+	  sessionStorage.setItem("user",JSON.stringify(userInfo));
+	closeModal();
+}
+
+function checkId() { 
+    alert("사용 가능한 아이디입니다.");
+}
+
+```
+
+</div>
+</details>
+
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">회원가입 HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">로그인 HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/modal.css" target="_blank">회원가입/로그인 CSS코드</a><br>
@@ -224,6 +589,216 @@ modal로 구현했다.
 ---
 
 # 3. 내 정보 조회
+
+<details>
+<summary>HTML</summary>
+<div markdown="1">       
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- title -->
+        <div id="header-title">
+            <a href="main.html"><span>Enjoy Trip</span></a>
+        </div>
+        <!-- header-right -->
+        <div id="header-right">
+            <!-- menu -->
+            <div id="header-right-menu">
+                <!-- 공지사항 -->
+                <div><a href="#">공지사항</a></div>
+                <!-- 공유게시판 -->
+                <div><a href="#">공유게시판</a></div>
+                <!-- 관광지역 -->
+                <div><a href="trip.html">관광지역</a></div>
+            </div>
+            <!-- login -->
+            <div id="header-right-login">
+                <!-- 로그인 -->
+                <div><a href="/login.html" id="loginCheck">로그인</a></div>
+                <!-- 회원가입 -->
+                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
+                <!-- 로그아웃 -->
+                <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
+                <!-- 내 정보 조회 -->
+                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- main -->
+    <main>
+        <section>
+            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
+            <article id="main-background-first">
+                <div class="background-image">
+                    <div class="dark-overlay"></div>
+                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
+                </div>
+            </article>
+            <!-- 관광지 사진 -->
+            <!-- <article id="main-background-second"></article> -->
+            <!-- 공지사항 -->
+            <!-- <article id="main-background-third"></article> -->
+            <!-- 공유게시판 -->
+            <!-- <article id="main-background-fourth"></article> -->
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <!-- logo -->
+        <span>
+            <img src="./img/ssafy_logo.png" alt="ssafy">
+        </span>
+        <!-- 이용약관 등 -->
+        <!-- 관계자 위치, 연락처, 이메일 -->
+        <span>Copyright © SSAFY 2023 Daejeon
+        <br>Designed by thdqudgns & Brojjun</span>
+    </footer>
+
+    <!-- loginCheck -->
+    <script src="./js/loginCheck.js"></script>
+</body>
+</html>
+```
+
+</div>
+</details>
+
+<details>
+<summary>CSS</summary>
+<div markdown="1">       
+
+```css
+/* 
+    mypage-main
+    mypage-section
+    mypage-title
+    mypage-content
+    mypage-button
+    btn-update
+    btn-delete
+ */
+#mypage-main {
+    height: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#mypage-section {
+    border: 5px solid rgb(91, 91, 91);
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#mypage-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#mypage-content {
+    width: 90%;
+    height: 40%;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#mypage-content > div {
+    padding: 15px 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#mypage-section > div:nth-last-child(){
+    text-align: right;
+}
+
+#mypage-button > button {
+    width: 100px;
+    height: 40px;
+}
+
+#btn-update {
+    background-color: rgb(54, 67, 249);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#btn-delete {
+    background-color: rgb(255, 77, 77);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary>JS</summary>
+<div markdown="1">       
+
+```js
+function mypageUpdate() {
+    alert('회원정보를 수정하시겠습니까?');
+}
+
+function mypageDelete() {
+    if(confirm('회원정보를 삭제하시겠습니까?')) {
+        window.sessionStorage.removeItem('user');
+        window.sessionStorage.removeItem('id');
+        window.location = 'main.html';
+    }
+}
+
+let content = document.querySelector('#mypage-content');
+let user = JSON.parse(window.sessionStorage.user);
+//console.log(typeof user);
+//console.log(user['name']);
+//console.log(user);
+content.innerHTML += `
+    <div> ▶ 이름 : ${user.name}</div>
+    <div> ▶ 아이디 : ${user.id}</div>
+    <div> ▶ 이메일 : ${user.email}</div>
+`;
+```
+
+</div>
+</details>
 
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/mypage.css" target="_blank">CSS코드</a><br>
@@ -241,6 +816,421 @@ modal로 구현했다.
 ---
 
 # 4. 관광 정보 조회
+
+<details>
+<summary>HTML</summary>
+<div markdown="1">       
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- title -->
+        <div id="header-title">
+            <a href="main.html"><span>Enjoy Trip</span></a>
+        </div>
+        <!-- header-right -->
+        <div id="header-right">
+            <!-- menu -->
+            <div id="header-right-menu">
+                <!-- 공지사항 -->
+                <div><a href="#">공지사항</a></div>
+                <!-- 공유게시판 -->
+                <div><a href="#">공유게시판</a></div>
+                <!-- 관광지역 -->
+                <div><a href="trip.html">관광지역</a></div>
+            </div>
+            <!-- login -->
+            <div id="header-right-login">
+                <!-- 로그인 -->
+                <div><a href="/login.html" id="loginCheck">로그인</a></div>
+                <!-- 회원가입 -->
+                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
+                <!-- 로그아웃 -->
+                <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
+                <!-- 내 정보 조회 -->
+                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- main -->
+    <main>
+        <section>
+            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
+            <article id="main-background-first">
+                <div class="background-image">
+                    <div class="dark-overlay"></div>
+                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
+                </div>
+            </article>
+            <!-- 관광지 사진 -->
+            <!-- <article id="main-background-second"></article> -->
+            <!-- 공지사항 -->
+            <!-- <article id="main-background-third"></article> -->
+            <!-- 공유게시판 -->
+            <!-- <article id="main-background-fourth"></article> -->
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <!-- logo -->
+        <span>
+            <img src="./img/ssafy_logo.png" alt="ssafy">
+        </span>
+        <!-- 이용약관 등 -->
+        <!-- 관계자 위치, 연락처, 이메일 -->
+        <span>Copyright © SSAFY 2023 Daejeon
+        <br>Designed by thdqudgns & Brojjun</span>
+    </footer>
+
+    <!-- loginCheck -->
+    <script src="./js/loginCheck.js"></script>
+</body>
+</html>
+```
+
+</div>
+</details>
+
+<details>
+<summary>CSS</summary>
+<div markdown="1">       
+
+```css
+#trip-main-mapWrapper,
+#trip-main-rvWrapper{
+    width:50%;
+    height:600px;
+    float: left;
+}
+
+#trip-main-map,
+#trip-main-roadview {
+    width:100%;
+    height:100%;
+}
+
+#trip-main-container {overflow:hidden;height:800px;position:relative;}
+#trip-main-mapWrapper {width:100%;height:800px;z-index:1;}
+#trip-main-rvWrapper {width:50%;height:800px;top:0;right:0;position:absolute;z-index:0;}
+#trip-main-container.view_roadview #trip-main-mapWrapper {width: 50%;}
+#trip-main-roadviewControl {position:absolute;top:5px;left:5px;width:42px;height:42px;z-index: 1;cursor: pointer; background: url(https://t1.daumcdn.net/localimg/localimages/07/2018/pc/common/img_search.png) 0 -450px no-repeat;}
+#trip-main-roadviewControl.active {background-position:0 -350px;}
+#trip-main-close {position: absolute;padding: 4px;top: 5px;left: 5px;cursor: pointer;background: #fff;border-radius: 4px;border: 1px solid #c8c8c8;box-shadow: 0px 1px #888;}
+#trip-main-close .img {display: block;background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/rv_close.png) no-repeat;width: 14px;height: 14px;}
+```
+
+</div>
+</details>
+
+<details>
+<summary>JS</summary>
+<div markdown="1">       
+
+```js
+// index page 로딩 후 전국의 시도 설정.
+const serviceKey = "***본인의 data.go.kr의 '한국관광공사_국문 관광정보 서비스_GW' 서비스키***";
+let areaUrl =
+    "https://apis.data.go.kr/B551011/KorService1/areaCode1?serviceKey=" +
+    serviceKey +
+    "&numOfRows=20&pageNo=1&MobileOS=ETC&MobileApp=AppTest&_type=json";
+// fetch(areaUrl, { method: "GET" }).then(function (response) { return response.json() }).then(function (data) { makeOption(data); });
+fetch(areaUrl, { method: "GET" })
+.then((response) => response.json())
+.then((data) => makeOption(data));
+
+function makeOption(data) {
+let areas = data.response.body.items.item;
+    // console.log(areas);
+let sel = document.getElementById("search-area");
+areas.forEach((area) => {
+    let opt = document.createElement("option");
+    opt.setAttribute("value", area.code);
+    opt.appendChild(document.createTextNode(area.name));
+
+    sel.appendChild(opt);
+});
+}
+
+// 검색 버튼을 누르면..
+// 지역, 유형, 검색어 얻기.
+// 위 데이터를 가지고 공공데이터에 요청.
+// 받은 데이터를 이용하여 화면 구성.
+document.getElementById("btn-search").addEventListener("click", () => {
+    let searchUrl = `https://apis.data.go.kr/B551011/KorService1/searchKeyword1?serviceKey=${serviceKey}&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&_type=json&listYN=Y&arrange=A`;
+
+    let areaCode = document.getElementById("search-area").value;
+    let contentTypeId = document.getElementById("search-content-id").value;
+    let keyword = document.getElementById("search-keyword").value;
+
+    if (parseInt(areaCode)) searchUrl += `&areaCode=${areaCode}`;
+    if (parseInt(contentTypeId)) searchUrl += `&contentTypeId=${contentTypeId}`;
+    if (!keyword) {
+        alert("검색어 입력 필수!!!");
+        return;
+    } else searchUrl += `&keyword=${keyword}`;
+
+    fetch(searchUrl)
+        .then((response) => response.json())
+        .then((data) => makeList(data));
+    });
+
+var positions; // marker 배열.
+function makeList(data) {
+    document.querySelector("table").setAttribute("style", "display: ;");
+    let trips = data.response.body.items.item;
+    let tripList = ``;
+    positions = [];
+    trips.forEach((area) => {
+        tripList += `
+        <tr onclick="moveCenter(${area.mapy}, ${area.mapx});">
+            <td><img src="${area.firstimage}" width="100px"></td>
+            <td>${area.title}</td>
+            <td>${area.addr1} ${area.addr2}</td>
+            <td>${area.mapy}</td>
+            <td>${area.mapx}</td>
+        </tr>
+        `;
+
+        let markerInfo = {
+        title: area.title,
+        latlng: new kakao.maps.LatLng(area.mapy, area.mapx),
+        };
+        positions.push(markerInfo);
+    });
+    document.getElementById("trip-list").innerHTML = tripList;
+    displayMarker();
+    }
+
+
+// ------------------------------------------------------------------------------------------------------------------    
+// 카카오지도
+var overlayOn = false, // 지도 위에 로드뷰 오버레이가 추가된 상태를 가지고 있을 변수
+    container = document.getElementById('trip-main-container'), // 지도와 로드뷰를 감싸고 있는 div 입니다
+    mapWrapper = document.getElementById('trip-main-mapWrapper'), // 지도를 감싸고 있는 div 입니다
+    mapContainer = document.getElementById('trip-main-map'), // 지도를 표시할 div 입니다 
+    rvContainer = document.getElementById('trip-main-roadview'); //로드뷰를 표시할 div 입니다
+
+var mapCenter = new kakao.maps.LatLng(36.35536, 127.298294), // 지도의 중심좌표
+    mapOption = {
+        center: mapCenter, // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와 지도 옵션으로 지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption);
+
+// 로드뷰 객체를 생성합니다 
+var rv = new kakao.maps.Roadview(rvContainer); 
+
+// 좌표로부터 로드뷰 파노라마 ID를 가져올 로드뷰 클라이언트 객체를 생성합니다 
+var rvClient = new kakao.maps.RoadviewClient(); 
+
+// 로드뷰에 좌표가 바뀌었을 때 발생하는 이벤트를 등록합니다 
+kakao.maps.event.addListener(rv, 'position_changed', function() {
+
+    // 현재 로드뷰의 위치 좌표를 얻어옵니다 
+    var rvPosition = rv.getPosition();
+
+    // 지도의 중심을 현재 로드뷰의 위치로 설정합니다
+    map.setCenter(rvPosition);
+
+    // 지도 위에 로드뷰 도로 오버레이가 추가된 상태이면
+    if(overlayOn) {
+        // 마커의 위치를 현재 로드뷰의 위치로 설정합니다
+        marker.setPosition(rvPosition);
+    }
+});
+
+function displayMarker() {
+    // 마커 이미지의 이미지 주소입니다
+    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+
+    for (var i = 0; i < positions.length; i++) {
+        // 마커 이미지의 이미지 크기 입니다
+        var imageSize = new kakao.maps.Size(24, 35);
+
+        // 마커 이미지를 생성합니다
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng, // 마커를 표시할 위치
+        title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image: markerImage, // 마커 이미지
+        });
+    }
+
+    // 첫번째 검색 정보를 이용하여 지도 중심을 이동 시킵니다
+    map.setCenter(positions[0].latlng);
+    }
+
+    function moveCenter(lat, lng) {
+    map.setCenter(new kakao.maps.LatLng(lat, lng));
+    }
+
+// 마커 이미지를 생성합니다
+var markImage = new kakao.maps.MarkerImage(
+    'https://t1.daumcdn.net/localimg/localimages/07/2018/pc/roadview_minimap_wk_2018.png',
+    new kakao.maps.Size(26, 46),
+    {
+        // 스프라이트 이미지를 사용합니다.
+        // 스프라이트 이미지 전체의 크기를 지정하고
+        spriteSize: new kakao.maps.Size(1666, 168),
+        // 사용하고 싶은 영역의 좌상단 좌표를 입력합니다.
+        // background-position으로 지정하는 값이며 부호는 반대입니다.
+        spriteOrigin: new kakao.maps.Point(705, 114),
+        offset: new kakao.maps.Point(13, 46)
+    }
+);
+
+// 드래그가 가능한 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    image : markImage,
+    position: mapCenter,
+    draggable: true
+});
+
+// 마커에 dragend 이벤트를 등록합니다
+kakao.maps.event.addListener(marker, 'dragend', function(mouseEvent) {
+
+    // 현재 마커가 놓인 자리의 좌표입니다 
+    var position = marker.getPosition();
+
+    // 마커가 놓인 위치를 기준으로 로드뷰를 설정합니다
+    toggleRoadview(position);
+});
+
+//지도에 클릭 이벤트를 등록합니다
+kakao.maps.event.addListener(map, 'click', function(mouseEvent){
+    
+    // 지도 위에 로드뷰 도로 오버레이가 추가된 상태가 아니면 클릭이벤트를 무시합니다 
+    if(!overlayOn) {
+        return;
+    }
+
+    // 클릭한 위치의 좌표입니다 
+    var position = mouseEvent.latLng;
+
+    // 마커를 클릭한 위치로 옮깁니다
+    marker.setPosition(position);
+
+    // 클락한 위치를 기준으로 로드뷰를 설정합니다
+    toggleRoadview(position);
+});
+
+// 전달받은 좌표(position)에 가까운 로드뷰의 파노라마 ID를 추출하여
+// 로드뷰를 설정하는 함수입니다
+function toggleRoadview(position){
+    rvClient.getNearestPanoId(position, 50, function(panoId) {
+        // 파노라마 ID가 null 이면 로드뷰를 숨깁니다
+        if (panoId === null) {
+            toggleMapWrapper(true, position);
+        } else {
+        toggleMapWrapper(false, position);
+
+            // panoId로 로드뷰를 설정합니다
+            rv.setPanoId(panoId, position);
+        }
+    });
+}
+
+// 지도를 감싸고 있는 div의 크기를 조정하는 함수입니다
+function toggleMapWrapper(active, position) {
+    if (active) {
+
+        // 지도를 감싸고 있는 div의 너비가 100%가 되도록 class를 변경합니다 
+        container.className = '';
+
+        // 지도의 크기가 변경되었기 때문에 relayout 함수를 호출합니다
+        map.relayout();
+
+        // 지도의 너비가 변경될 때 지도중심을 입력받은 위치(position)로 설정합니다
+        map.setCenter(position);
+    } else {
+
+        // 지도만 보여지고 있는 상태이면 지도의 너비가 50%가 되도록 class를 변경하여
+        // 로드뷰가 함께 표시되게 합니다
+        if (container.className.indexOf('view_roadview') === -1) {
+            container.className = 'view_roadview';
+
+            // 지도의 크기가 변경되었기 때문에 relayout 함수를 호출합니다
+            map.relayout();
+
+            // 지도의 너비가 변경될 때 지도중심을 입력받은 위치(position)로 설정합니다
+            map.setCenter(position);
+        }
+    }
+}
+
+// 지도 위의 로드뷰 도로 오버레이를 추가,제거하는 함수입니다
+function toggleOverlay(active) {
+    if (active) {
+        overlayOn = true;
+
+        // 지도 위에 로드뷰 도로 오버레이를 추가합니다
+        map.addOverlayMapTypeId(kakao.maps.MapTypeId.ROADVIEW);
+
+        // 지도 위에 마커를 표시합니다
+        marker.setMap(map);
+
+        // 마커의 위치를 지도 중심으로 설정합니다 
+        marker.setPosition(map.getCenter());
+
+        // 로드뷰의 위치를 지도 중심으로 설정합니다
+        toggleRoadview(map.getCenter());
+    } else {
+        overlayOn = false;
+
+        // 지도 위의 로드뷰 도로 오버레이를 제거합니다
+        map.removeOverlayMapTypeId(kakao.maps.MapTypeId.ROADVIEW);
+
+        // 지도 위의 마커를 제거합니다
+        marker.setMap(null);
+    }
+}
+
+// 지도 위의 로드뷰 버튼을 눌렀을 때 호출되는 함수입니다
+function setRoadviewRoad() {
+    var control = document.getElementById('trip-main-roadviewControl');
+
+    // 버튼이 눌린 상태가 아니면
+    if (control.className.indexOf('active') === -1) {
+        control.className = 'active';
+
+        // 로드뷰 도로 오버레이가 보이게 합니다
+        toggleOverlay(true);
+    } else {
+        control.className = '';
+
+        // 로드뷰 도로 오버레이를 제거합니다
+        toggleOverlay(false);
+    }
+}
+
+// 로드뷰에서 X버튼을 눌렀을 때 로드뷰를 지도 뒤로 숨기는 함수입니다
+function closeRoadview() {
+    var position = marker.getPosition();
+    toggleMapWrapper(true, position);
+}
+```
+
+</div>
+</details>
 
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/trip.css" target="_blank">CSS코드</a><br>
