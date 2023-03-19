@@ -3,7 +3,11 @@ function mypageUpdate() {
 }
 
 function mypageDelete() {
-    alert('회원정보를 삭제하시겠습니까?');
+    if(confirm('회원정보를 삭제하시겠습니까?')) {
+        window.sessionStorage.removeItem('user');
+        window.sessionStorage.removeItem('id');
+        window.location = 'main.html';
+    }
 }
 
 let content = document.querySelector('#mypage-content');
