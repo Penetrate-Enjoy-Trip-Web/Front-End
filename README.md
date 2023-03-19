@@ -14,6 +14,189 @@
 
 # 1. 메인페이지
 
+<details>
+<summary>여기를 눌러주세요</summary>
+<div markdown="1">       
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- title -->
+        <div id="header-title">
+            <a href="main.html"><span>Enjoy Trip</span></a>
+        </div>
+        <!-- header-right -->
+        <div id="header-right">
+            <!-- menu -->
+            <div id="header-right-menu">
+                <!-- 공지사항 -->
+                <div><a href="#">공지사항</a></div>
+                <!-- 공유게시판 -->
+                <div><a href="#">공유게시판</a></div>
+                <!-- 관광지역 -->
+                <div><a href="trip.html">관광지역</a></div>
+            </div>
+            <!-- login -->
+            <div id="header-right-login">
+                <!-- 로그인 -->
+                <div><a href="/login.html" id="loginCheck">로그인</a></div>
+                <!-- 회원가입 -->
+                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
+                <!-- 로그아웃 -->
+                <div><a href="main.html" onclick="logout()" id="logoutCheck">로그아웃</a></div>
+                <!-- 내 정보 조회 -->
+                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- main -->
+    <main>
+        <section>
+            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
+            <article id="main-background-first">
+                <div class="background-image">
+                    <div class="dark-overlay"></div>
+                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <!-- logo -->
+        <span>
+            <img src="./img/ssafy_logo.png" alt="ssafy">
+        </span>
+        <!-- 이용약관 등 -->
+        <!-- 관계자 위치, 연락처, 이메일 -->
+        <span>Copyright © SSAFY 2023 Daejeon
+        <br>Designed by thdqudgns & Brojjun</span>
+    </footer>
+
+    <!-- loginCheck -->
+    <script src="./js/loginCheck.js"></script>
+</body>
+</html>
+```
+
+</div>
+</details>
+
+<details>
+<summary>여기를 눌러주세요</summary>
+<div markdown="1">       
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* ----------------------- */
+
+#main-background-first {
+    height: 1200px;
+}
+
+#main-background-second,
+#main-background-third,
+#main-background-fourth{
+    /* height: 200px; */
+}
+
+.background-image {
+    position: relative;
+    background-image: url('/img/airplane.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.background-image-button {
+    padding: 10px 20px;
+    /* background-color: rgb(84, 170, 227); */
+    background-color: rgb(84, 170, 227, 0);
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255, 0.7);
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+.background-image-button:hover {
+    color: rgb(95, 183, 255);
+    font-size: 65px;
+}
+
+/* --------------------------------- */
+```
+
+</div>
+</details>
+
+<details>
+<summary>여기를 눌러주세요</summary>
+<div markdown="1">       
+
+```js
+let loginCheck = document.getElementById('loginCheck');
+let registerCheck = document.getElementById('registerCheck');
+let logoutCheck = document.getElementById('logoutCheck');
+let mypageCheck = document.getElementById('mypageCheck');
+
+if (window.sessionStorage.id) {
+    loginCheck.style.display = 'none';
+    registerCheck.style.display = 'none';
+    logoutCheck.style.display = 'content';
+    mypageCheck.style.display = 'content';
+} else {
+    loginCheck.style.display = 'content';
+    registerCheck.style.display = 'content';
+    logoutCheck.style.display = 'none';
+    mypageCheck.style.display = 'none';
+}
+
+function logout() {
+    window.sessionStorage.removeItem('id');
+}
+```
+
+</div>
+</details>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/main.css" target="_blank">CSS코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/loginCheck.js" target="_blank">JS코드</a><br>
