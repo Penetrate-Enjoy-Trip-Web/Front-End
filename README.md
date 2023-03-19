@@ -5,6 +5,9 @@
 <img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML&logoColor=white"/> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS&logoColor=white"/> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"/>
 
 ### :bulb: Maker - [Brojjun](https://github.com/Brojjun) & [thdqudgns](https://github.com/thdqudgns)
+주의사항 :   
+trip.js 파일의 2행에는 ***본인의 data.go.kr의 '한국관광공사_국문 관광정보 서비스_GW' 서비스키*** 를 추가해야 한다.   
+trip.html 파일의 120행에는 ***본인의 KaKao API 인증 키*** 를 추가해야 한다.
 
 ### Introduce
 여행을 가기 위해서는 어느곳에 무엇이 있는지 알아야 한다   
