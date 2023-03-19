@@ -653,6 +653,13 @@ function checkId() {
 
 <img src="https://user-images.githubusercontent.com/92148521/226174300-faf673bf-423a-489d-a9ae-67c7b554748b.png" width="400px"> <img src="https://user-images.githubusercontent.com/92148521/226174306-a973016c-3d84-41ed-bed0-26fddcd338d5.png" width="400px">
 
+### 로그인 전
+![image](https://user-images.githubusercontent.com/92148521/226177401-42de918a-b795-492d-aeff-c5224332990e.png)
+
+
+### 로그인 후
+![image](https://user-images.githubusercontent.com/92148521/226177390-0dbd29b2-2021-4ff2-9d63-b54db8165b2d.png)
+
 ---
 
 # 3. 내 정보 조회
