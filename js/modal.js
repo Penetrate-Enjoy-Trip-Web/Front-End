@@ -9,6 +9,12 @@ function closeModal() {
 	location.href = "main.html"
 }
 
+function login(){
+	const id = document.getElementById("id").value;
+	sessionStorage.setItem("id",id);
+	closeModal();
+}
+
 function checkId() { 
     alert("사용 가능한 아이디입니다.");
 }
