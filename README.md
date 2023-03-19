@@ -576,8 +576,8 @@ function checkId() {
 </div>
 </details>
 
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">회원가입 HTML코드</a><br>
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">로그인 HTML코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/login.html" target="_blank">회원가입 HTML코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/makeId.html" target="_blank">로그인 HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/modal.css" target="_blank">회원가입/로그인 CSS코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/modal.js" target="_blank">회원가입/로그인 JS코드</a><br>
 
@@ -800,7 +800,7 @@ content.innerHTML += `
 </div>
 </details>
 
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/mypage.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/mypage.css" target="_blank">CSS코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/mypage.js" target="_blank">JS코드</a><br>
 
@@ -1232,7 +1232,7 @@ function closeRoadview() {
 </div>
 </details>
 
-<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/main.html" target="_blank">HTML코드</a><br>
+<a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/trip.html" target="_blank">HTML코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/css/trip.css" target="_blank">CSS코드</a><br>
 <a href="https://github.com/Penetrate-Enjoy-Trip-Web/Front-End/blob/main/js/trip.js" target="_blank">JS코드</a><br>
 
