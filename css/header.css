@@ -13,11 +13,19 @@ a {
 header {
     border-bottom: 1px solid gainsboro;
     min-height: 60px;
+    box-shadow: 1px 1px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #header-title {
     float: left;
     min-height: 60px;
+    margin-left: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #header-title > a {
@@ -34,10 +42,17 @@ header {
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
+    margin-right: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #header-right-menu {
     flex: 0 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 #header-right-menu > div {
     float: left;
@@ -51,6 +66,9 @@ header {
 
 #header-right-login {
     flex: 0 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 #header-right-login > div {
     float: left;

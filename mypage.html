@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/mypage.css">
 </head>
 <body>
     <!-- header -->
@@ -40,32 +40,24 @@
             </div>
         </div>
     </header>
-    
+
     <!-- main -->
-    <main>
-        <section>
-            <!-- 메인 이미지 + 관관지역 검색 페이지 이동 -->
-            <article id="main-background-first">
-                <div class="background-image">
-                    <div class="dark-overlay"></div>
-                    <a href="trip.html" class="background-image-button">여행을 떠나볼까요?</a>
-                </div>
-            </article>
-            <!-- 관광지 사진 -->
-            <article id="main-background-second">
-
-            </article>
-            <!-- 공지사항 -->
-            <article id="main-background-third">
-
-            </article>
-            <!-- 공유게시판 -->
-            <article id="main-background-fourth">
-
-            </article>
-        </section>
+    <main id="mypage-main">
+        <!-- name, id, email 조회하고 삭제, 수정하기 -->
+        <div id="mypage-section">
+            <div id="mypage-title">
+                &lt; 내 정보 조회 &gt;
+            </div>
+            <div id="mypage-content">
+                
+            </div>
+            <div id="mypage-button">
+                <button onclick="mypageUpdate()" id="btn-update">수정</button>
+                <button onclick="mypageDelete()" id="btn-delete">삭제</button>
+            </div>
+        </div>
     </main>
-    
+
     <!-- footer -->
     <footer>
         <!-- logo -->
@@ -78,7 +70,7 @@
         <br>Designed by thdqudgns & Brojjun</span>
     </footer>
 
-    <!-- loginCheck -->
     <script src="./js/loginCheck.js"></script>
+    <script src="./js/mypage.js"></script>
 </body>
 </html>

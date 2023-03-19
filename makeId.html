@@ -36,14 +36,14 @@
         </div>
         <!-- login -->
         <div id="header-right-login">
-          <!-- 로그인 -->
-          <div>
-            <a href="/login.html"><span>로그인</span></a>
-          </div>
-          <!-- 회원가입 -->
-          <div>
-            <a href="/makeId.html"><span>회원가입</span></a>
-          </div>
+                <!-- 로그인 -->
+                <div><a href="/login.html" id="loginCheck">로그인</a></div>
+                <!-- 회원가입 -->
+                <div><a href="/makeId.html" id="registerCheck">회원가입</a></div>
+                <!-- 로그아웃 -->
+                <div><a href="" onclick="logout()" id="logoutCheck">로그아웃</a></div>
+                <!-- 내 정보 조회 -->
+                <div><a href="/mypage.html" id="mypageCheck">내 정보 조회</a></div>
         </div>
       </div>
     </header>
@@ -106,5 +106,7 @@
       <!-- 관계자 위치, 연락처, 이메일 -->
       <span>Copyright © SSAFY 2023 Daejeon <br />Designed by thdqudgns & Brojjun</span>
     </footer>
+    <!-- loginCheck -->
+    <script src="./js/loginCheck.js"></script>
   </body>
 </html>
